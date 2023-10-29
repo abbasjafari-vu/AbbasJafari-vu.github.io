@@ -1,12 +1,18 @@
 "use client";
 import Button from "_components/details/Button";
 
-export default () => (
-  <>
-    {[1, 1, 1, 1, 1].map(() => (
-      <Button href="" className="shimmer pointer-events-none w-24 ">
-        ...
-      </Button>
-    ))}
-  </>
-);
+export default function Loading() {
+  return (
+    <>
+      {[1, 1, 1, 1, 1].map((item, index) => (
+        <Button
+          key={`home-loading-${index}`}
+          href=""
+          className="shimmer pointer-events-none w-24 "
+        >
+          ...
+        </Button>
+      ))}
+    </>
+  );
+}
