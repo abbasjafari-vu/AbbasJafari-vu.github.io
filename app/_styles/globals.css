@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  src: url("/fonts/MarkoOne-Regular.ttf");
+  font-family: Marko One;
+}
+@font-face {
+  src: url("/fonts/MoiraiOne-Regular.ttf");
+  font-family: Moirai One;
+}
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/dana/DanaFaNum-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/dana/DanaFaNum-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/dana/DanaFaNum-DemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/dana/DanaFaNum-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: dana;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/dana/DanaFaNum-Black.woff") format("woff");
+}
+
+@layer base {
+  body {
+    @apply bg-primary-dark1 text-white overflow-x-hidden flex flex-col min-h-screen;
+  }
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2em;
+    @apply bg-primary-green;
+  }
+}
+
+@layer components {
+  .max-w-content {
+    @apply max-w-6xl w-full mx-auto px-4 xl:px-0;
+  }
+}
+
+@layer utilities {
+  .h-sideMenu {
+    height: calc(100vh - 64px);
+  }
+
+  .h-author {
+    height: calc(100vh - 240px);
+    max-height: calc(100vh - 240px);
+  }
+}
+
+.shimmer {
+  color: grey;
+  display: inline-flex;
+  mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1s infinite;
+  max-width: 500px;
+}
+
+@keyframes shimmer {
+  100% {
+    mask-position: left;
+  }
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
