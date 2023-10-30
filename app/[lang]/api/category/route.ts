@@ -1,10 +1,10 @@
 import { client } from "_sanity/lib/client";
-import { Params } from "_types";
 
-export async function GET(request: Request, { params }: Params) {
+export async function GET(request: Request) {
   const url = new URL(request.url);
+  const lang = url.searchParams.get("lang");
 
-  const query = `*[_type=="category_${params.lang}"]|order(number asc)`;
+  const query = `*[_type=="category_${lang}"]|order(number asc)`;
   const data = await client.fetch(query);
 
   return Response.json(data);

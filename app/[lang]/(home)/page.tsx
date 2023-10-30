@@ -7,7 +7,7 @@ type Props = Params;
 export default async function HomePage(props: Props) {
   const { params } = props;
 
-  const data = await api("/category", params.lang);
+  const data = await api(`/category?lang=${params.lang}`, params.lang);
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
       <Author>

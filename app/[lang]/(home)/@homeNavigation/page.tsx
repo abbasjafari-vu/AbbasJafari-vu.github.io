@@ -8,7 +8,7 @@ type Props = Params;
 export default async function HomeNavigation(props: Props) {
   const { params } = props;
 
-  const data = await api("/category", params.lang);
+  const data = await api(`/category?lang=${params.lang}`, params.lang);
 
   return (
     <>
