@@ -5,6 +5,7 @@ const nextConfig = {
           allowFutureImage: true,
         },
     },
+    output:"export"
 }
 
 module.exports = nextConfig
