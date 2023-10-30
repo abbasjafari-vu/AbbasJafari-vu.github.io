@@ -5,7 +5,12 @@ const nextConfig = {
           allowFutureImage: true,
         },
     },
-    output:"export"
+    output:"export",
+    exclude: [
+        'api',
+        'studio',
+      ],
+    
 }
 
 module.exports = nextConfig
