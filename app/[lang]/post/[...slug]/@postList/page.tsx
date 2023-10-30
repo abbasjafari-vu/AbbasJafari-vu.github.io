@@ -7,6 +7,8 @@ type Props = Params;
 export default async function PostList(props: Props) {
   const { params } = props;
 
+  console.log(params);
+
   const data = await getPosts(params.lang);
 
   return (
