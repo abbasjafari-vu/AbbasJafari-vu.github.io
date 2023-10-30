@@ -5,10 +5,9 @@ const nextConfig = {
           allowFutureImage: true,
         },
     },
-    output:"export",
-    exclude: [
-        './app/(admin)',
-      ],
+    output:"standalone",
+    
+
     
 }
 

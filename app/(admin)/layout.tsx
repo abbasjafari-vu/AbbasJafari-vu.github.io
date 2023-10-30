@@ -1,15 +1,9 @@
 "use client";
-
-import "_styles/globals.css";
 import { Children } from "_types";
+import React from "react";
 
-type Props = Children;
-export default function AdminLayout(props: Props) {
-  const { children } = props;
+export const dynamic = false;
 
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+export default function AdminLayuot({ children }: Children) {
+  return <>{children}</>;
 }
