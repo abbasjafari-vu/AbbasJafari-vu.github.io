@@ -1,3 +1,5 @@
+"use client";
+
 import "_styles/globals.css";
 import { Children } from "_types";
 
