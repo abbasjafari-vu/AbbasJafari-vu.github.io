@@ -3,6 +3,13 @@ import { Children, Params } from "_types";
 import React, { ReactNode } from "react";
 import tw from "tailwind-styled-components";
 import PostNavigation from "_components/post-navigation";
+import { getCategories } from "_appData";
+
+export async function generateStaticParams({ params }: Params) {
+  return (await getCategories(params.lang)).map(({ title }: any) => ({
+    slug: [title],
+  }));
+}
 
 type Props = Children &
   Params & { categoryList: ReactNode; postList: ReactNode };
