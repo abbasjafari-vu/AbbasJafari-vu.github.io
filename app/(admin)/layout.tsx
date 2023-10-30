@@ -2,7 +2,7 @@
 import { Children } from "_types";
 import React from "react";
 
-export const dynamic = "force-static";
+export const dynamicParams = false;
 
 export default function AdminLayuot({ children }: Children) {
   return <>{children}</>;
