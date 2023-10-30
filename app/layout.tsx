@@ -11,17 +11,7 @@ export async function generateStaticParams() {
   return [{ lang: "fa" }, { lang: "en" }];
 }
 
-type Props = Children & Params;
+type Props = Children;
 export default function RootLayout(props: Props) {
-  const { children, params } = props;
-
-  return (
-    <html lang={params.lang} dir={params.lang === "fa" ? "rtl" : "ltr"}>
-      <body
-        className={params.lang === "fa" ? "font-dana font-light" : "font-marko"}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  return props.children;
 }
