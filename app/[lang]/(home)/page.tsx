@@ -1,4 +1,4 @@
-import api from "_controls/api";
+import { getCategories } from "_appData";
 import { Params } from "_types";
 import Image from "next/image";
 import tw from "tailwind-styled-components";
@@ -7,7 +7,7 @@ type Props = Params;
 export default async function HomePage(props: Props) {
   const { params } = props;
 
-  const data = await api(`/category?lang=${params.lang}`, params.lang);
+  const data = await getCategories(params.lang);
   return (
     <div className="flex flex-col gap-8 max-w-4xl mx-auto">
       <Author>

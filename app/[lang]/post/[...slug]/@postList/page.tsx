@@ -1,4 +1,4 @@
-import api from "_controls/api";
+import { getPosts } from "_appData";
 import { Params } from "_types";
 import Link from "next/link";
 import React from "react";
@@ -7,7 +7,7 @@ type Props = Params;
 export default async function PostList(props: Props) {
   const { params } = props;
 
-  const data = await api("/posts", params.lang);
+  const data = await getPosts(params.lang);
 
   return (
     <>
