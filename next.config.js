@@ -7,8 +7,7 @@ const nextConfig = {
     },
     output:"export",
     exclude: [
-        'api',
-        'studio',
+        './app/(admin)',
       ],
     
 }
