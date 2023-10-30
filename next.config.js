@@ -5,7 +5,7 @@ const nextConfig = {
           allowFutureImage: true,
         },
     },
-    output:"standalone",
+    output:"export",
     
 
     
