@@ -14,17 +14,9 @@ export default function languageLayout(props: Props) {
   return (
     <>
       <Header />
-      <nav className="sticky top-0 z-50">
-        <DocsNav />
-      </nav>
-      <Main
-        dir={params.lang === "fa" ? "rtl" : "ltr"}
-        className={params.lang === "fa" ? "font-dana" : "font-marko"}
-      >
-        {children}
-      </Main>
+      <DocsNav />
+
+      {children}
     </>
   );
 }
-
-const Main = tw.main`flex flex-col min-h-screen`;

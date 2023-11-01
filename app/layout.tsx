@@ -1,6 +1,7 @@
 import "globals.css";
 import { Children } from "_types";
 import localFont from "next/font/local";
+import Body from "_components/Body";
 const marko = localFont({
   src: "_assets/fonts/MarkoOne-Regular.ttf",
   display: "swap",
@@ -28,7 +29,7 @@ export default function RootLayout(props: Props) {
 
   return (
     <html className={`${marko.variable} ${moirai.variable} ${dana.variable} `}>
-      <body className="relative w-screen overflow-x-hidden">{children}</body>
+      <Body>{children}</Body>
     </html>
   );
 }

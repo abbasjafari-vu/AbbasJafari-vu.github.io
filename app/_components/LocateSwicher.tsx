@@ -11,6 +11,7 @@ export default function LocateSwicher() {
 
   function setLang(lang: string) {
     localStorage.setItem("abbasjafari-language", lang);
+    if (lang === "fa") localStorage.setItem("abbasjafari-rtl", lang);
     replace(
       `/${lang}${category ? "/docs/" + category : ""}${post ? "/" + post : ""}`
     );

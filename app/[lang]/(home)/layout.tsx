@@ -1,6 +1,5 @@
 import { categories } from "_appData";
 import Button from "_components/Button";
-import Header from "_components/Header";
 import HomeContainer from "_components/HomeContainer";
 import MyDocuments from "_components/MyDocuments";
 import { Children, Params } from "_types";

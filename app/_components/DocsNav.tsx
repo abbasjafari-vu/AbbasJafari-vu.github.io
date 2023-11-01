@@ -17,11 +17,8 @@ export default function DocsNav() {
   const postsData = posts;
 
   return (
-    <>
-      <div
-        className={`max-w-content relative ${category ? "" : "hidden"}`}
-        dir={lang === "fa" ? "rtl" : "ltr"}
-      >
+    <nav className={`sticky top-0 z-50 ${category ? "" : "hidden"}`}>
+      <div className="max-w-content relative">
         <NavContainer className={openMenu ? "start-0" : "-start-64"}>
           <MyDocuments />
 
@@ -59,7 +56,7 @@ export default function DocsNav() {
           {openMenu ? <RiMenuUnfoldLine /> : <RiMenuFoldLine />}
         </button>
       </div>
-    </>
+    </nav>
   );
 }
 
