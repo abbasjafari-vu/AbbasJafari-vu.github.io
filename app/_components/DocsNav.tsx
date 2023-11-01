@@ -13,6 +13,9 @@ export default function DocsNav() {
   const { lang, category, post } = useParams();
   const [openMenu, setOpenMenu] = useState(false);
 
+  const categoriesData = categories(lang.toString());
+  const postsData = posts;
+
   return (
     <>
       <nav className="sticky top-0">
@@ -21,7 +24,7 @@ export default function DocsNav() {
             <MyDocuments />
 
             <NavCategories>
-              {categories.map(({ title, slug }, index) => (
+              {categoriesData.map(({ title, slug }, index) => (
                 <Button
                   key={"category-" + index}
                   href={`/${lang}/docs/${slug}`}
@@ -32,7 +35,7 @@ export default function DocsNav() {
             </NavCategories>
 
             <NavPosts>
-              {posts.map(({ title, slug }, index) => (
+              {postsData.map(({ title, slug }, index) => (
                 <Link
                   key={"post-" + index}
                   href={`/${lang}/docs/${category}/${slug}`}

@@ -18,9 +18,9 @@
   li {
     position: relative;
   }
-  .list-inside li::before {
+  li::before {
     content: "";
-    @apply absolute w-1.5 aspect-square bg-primary-green z-10 rounded-full -translate-y-1/2 -start-0;
+    @apply absolute w-1.5 aspect-square bg-primary-green z-10 rounded-full -translate-y-1/2 -start-4;
     top: 12px;
   }
 }

@@ -10,6 +10,7 @@ import tw from "tailwind-styled-components";
 type Props = Children & Params;
 export default function HomeLayout(props: Props) {
   const { children, params } = props;
+  const categoriesData = categories(params.lang);
 
   return (
     <>
@@ -19,7 +20,7 @@ export default function HomeLayout(props: Props) {
       <nav className="mt-auto">
         <NavContainer>
           <MyDocuments />
-          {categories.map(({ title, slug }, index) => (
+          {categoriesData.map(({ title, slug }, index) => (
             <Button
               key={`home-nav-${index}`}
               href={`/${params.lang}/docs/${slug}`}

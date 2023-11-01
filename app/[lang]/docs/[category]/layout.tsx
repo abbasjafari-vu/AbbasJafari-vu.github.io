@@ -3,8 +3,9 @@ import DocsNav from "_components/DocsNav";
 import Header from "_components/Header";
 import { Children, Params } from "_types";
 
-export async function generateStaticParams() {
-  return categories.map(({ slug }) => ({
+export async function generateStaticParams({ params }: Params) {
+  const data = categories(params.lang);
+  return data.map(({ slug }) => ({
     category: slug,
   }));
 }
