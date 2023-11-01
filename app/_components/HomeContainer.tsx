@@ -11,6 +11,9 @@ export default function HomeContainer(props: Props) {
   const { lang } = useParams();
   const [more, setMore] = useState(false);
 
+  const moreText = lang === "fa" ? "بیشتر" : "More";
+  const lessText = lang === "fa" ? "کمتر" : "Less";
+
   return (
     <HomePage
       className={more ? "max-h-[2000px] pb-10" : "max-h-screen sm:h-author"}
@@ -21,7 +24,7 @@ export default function HomeContainer(props: Props) {
         onClick={() => setMore(!more)}
       >
         <div className="flex justify-center bg-gradient-to-t from-primary-dark2 to-primary-green/10 py-2 rounded-t-xl text-sm lg:py-2.5 lg:text-base">
-          {more ? "مطالب کمتر" : "مطالب بیشتر"}
+          {more ? lessText : moreText}
         </div>
       </ReadMore>
     </HomePage>
