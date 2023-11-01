@@ -48,7 +48,7 @@ export default function DocsNav() {
           </NavPosts>
         </NavContainer>
         <button
-          className={`fixed bottom-5 text-xl duration-300 lg:hidden ${
+          className={`fixed bottom-5 text-2xl text-primary-green duration-300 lg:hidden ${
             openMenu ? "start-52" : "start-5"
           } ${lang === "en" ? "rotate-180" : ""}`}
           onClick={() => setOpenMenu(!openMenu)}
