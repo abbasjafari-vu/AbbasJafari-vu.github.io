@@ -20,9 +20,9 @@ const config: Config = {
         "primary-brown": "#222",
       },
       fontFamily: {
-        marko: "Marko One",
-        moirai: "Moirai One",
-        dana: "dana",
+        marko: "var(--font-marko)",
+        moirai: "var(--font-moirai)",
+        dana: "var(--font-dana)",
       },
     },
   },

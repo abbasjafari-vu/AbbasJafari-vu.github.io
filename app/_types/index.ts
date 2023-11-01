@@ -1,9 +1,6 @@
 import { ReactNode } from "react";
 
 export type Children = { children: ReactNode };
-
 export type Params = {
-  params: { lang: "en" | "fa"; slug: string[] };
+  params: { lang: string; category: string; post: string };
 };
-
-export type SearchParams = { searchParams: { id: string } };
