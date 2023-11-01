@@ -50,16 +50,15 @@ export default function DocsNav() {
             ))}
           </NavPosts>
         </NavContainer>
+        <button
+          className={`fixed bottom-5 text-xl duration-300 lg:hidden ${
+            openMenu ? "start-52" : "start-5"
+          } ${lang === "en" ? "rotate-180" : ""}`}
+          onClick={() => setOpenMenu(!openMenu)}
+        >
+          {openMenu ? <RiMenuUnfoldLine /> : <RiMenuFoldLine />}
+        </button>
       </div>
-      <button
-        dir={lang === "fa" ? "rtl" : "ltr"}
-        className={`fixed bottom-5 text-xl duration-300 lg:hidden ${
-          openMenu ? "start-52" : "start-5"
-        } ${lang === "en" ? "rotate-180" : ""}`}
-        onClick={() => setOpenMenu(!openMenu)}
-      >
-        {openMenu ? <RiMenuUnfoldLine /> : <RiMenuFoldLine />}
-      </button>
     </>
   );
 }
