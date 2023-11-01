@@ -14,8 +14,6 @@ export default function HomeLayout(props: Props) {
 
   return (
     <>
-      <Header />
-
       <HomeContainer>{children}</HomeContainer>
       <nav className="mt-auto">
         <NavContainer>

@@ -18,42 +18,41 @@ export default function DocsNav() {
 
   return (
     <>
-      <nav className="sticky top-0">
-        <div className="max-w-content relative">
-          <NavContainer className={openMenu ? "start-0" : "-start-64"}>
-            <MyDocuments />
+      <div
+        className={`max-w-content relative ${category ? "" : "hidden"}`}
+        dir={lang === "fa" ? "rtl" : "ltr"}
+      >
+        <NavContainer className={openMenu ? "start-0" : "-start-64"}>
+          <MyDocuments />
 
-            <NavCategories>
-              {categoriesData.map(({ title, slug }, index) => (
-                <Button
-                  key={"category-" + index}
-                  href={`/${lang}/docs/${slug}`}
-                >
-                  {title}
-                </Button>
-              ))}
-            </NavCategories>
+          <NavCategories>
+            {categoriesData.map(({ title, slug }, index) => (
+              <Button key={"category-" + index} href={`/${lang}/docs/${slug}`}>
+                {title}
+              </Button>
+            ))}
+          </NavCategories>
 
-            <NavPosts>
-              {postsData.map(({ title, slug }, index) => (
-                <Link
-                  key={"post-" + index}
-                  href={`/${lang}/docs/${category}/${slug}`}
-                  className={`py-3 ${
-                    post === slug
-                      ? "bg-primary-dark2 rounded-s-full px-5 -me-4"
-                      : ""
-                  }`}
-                  onClick={() => setOpenMenu(false)}
-                >
-                  {title}
-                </Link>
-              ))}
-            </NavPosts>
-          </NavContainer>
-        </div>
-      </nav>
+          <NavPosts>
+            {postsData.map(({ title, slug }, index) => (
+              <Link
+                key={"post-" + index}
+                href={`/${lang}/docs/${category}/${slug}`}
+                className={`py-3 ${
+                  post === slug
+                    ? "bg-primary-dark2 rounded-s-full px-5 -me-4"
+                    : ""
+                }`}
+                onClick={() => setOpenMenu(false)}
+              >
+                {title}
+              </Link>
+            ))}
+          </NavPosts>
+        </NavContainer>
+      </div>
       <button
+        dir={lang === "fa" ? "rtl" : "ltr"}
         className={`fixed bottom-5 text-xl duration-300 lg:hidden ${
           openMenu ? "start-52" : "start-5"
         } ${lang === "en" ? "rotate-180" : ""}`}

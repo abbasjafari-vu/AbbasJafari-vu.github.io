@@ -16,9 +16,6 @@ export default function CategoryLayout(props: Props) {
 
   return (
     <>
-      <Header />
-      <DocsNav />
-
       <div className="min-h-screen max-w-content flex pb-5 duration-300">
         <div className="bg-primary-dark2 p-5 flex-1 rounded-xl lg:ms-64">
           {children}

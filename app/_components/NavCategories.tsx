@@ -17,7 +17,7 @@ export default function NavCategories(props: Props) {
       onClick={() => setOpenDocsCategory(!openDocsCategory)}
     >
       <Button href="" className="pointer-events-none capitalize">
-        {category.toString().replace("-", " ")}
+        {category?.toString().replace("-", " ")}
       </Button>
       <div className="text-xl">
         {openDocsCategory ? <BsChevronUp /> : <BsChevronDown />}

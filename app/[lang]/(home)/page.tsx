@@ -50,7 +50,7 @@ export default function HomePage(props: Props) {
         <p>{p4}</p>
 
         <b>{skills.title}</b>
-        <ul className="list-disc list-inside mb-5">
+        <ul className="ps-4 mb-5">
           {skills.list.map((item, index) => (
             <li key={`skill-${index}`}>{item}</li>
           ))}
