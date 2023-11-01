@@ -1,7 +1,6 @@
 import DocsNav from "_components/DocsNav";
 import Header from "_components/Header";
 import { Children, Params } from "_types";
-import tw from "tailwind-styled-components";
 
 export async function generateStaticParams() {
   return [{ lang: "fa" }, { lang: "en" }];

@@ -2,6 +2,7 @@ import "globals.css";
 import { Children } from "_types";
 import localFont from "next/font/local";
 import Body from "_components/Body";
+
 const marko = localFont({
   src: "_assets/fonts/MarkoOne-Regular.ttf",
   display: "swap",
