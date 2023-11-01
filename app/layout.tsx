@@ -28,7 +28,7 @@ export default function RootLayout(props: Props) {
 
   return (
     <html className={`${marko.variable} ${moirai.variable} ${dana.variable} `}>
-      <body>{children}</body>
+      <body className="relative w-screen overflow-x-hidden">{children}</body>
     </html>
   );
 }

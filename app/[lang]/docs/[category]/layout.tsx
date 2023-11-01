@@ -1,6 +1,4 @@
 import { categories } from "_appData";
-import DocsNav from "_components/DocsNav";
-import Header from "_components/Header";
 import { Children, Params } from "_types";
 
 export async function generateStaticParams({ params }: Params) {

@@ -20,8 +20,8 @@ export default function categoryPage(props: Props) {
   })[0].discription;
 
   return (
-    <div className="rtl:font-light rtl:text-right text-primary-gray">
-      <h1 className="my-5 text-center font-bold">{title}</h1>
+    <div className="rtl:font-light text-primary-gray">
+      <h1 className="my-5 font-bold">{title}</h1>
       <div>
         <p className="font-bold">{introduction.title}</p>
         <p>{introduction.text}</p>
