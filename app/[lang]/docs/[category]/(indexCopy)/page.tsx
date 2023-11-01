@@ -63,13 +63,13 @@ export default function categoryPage(props: Props) {
           ))}
         </ul>
       </div>
-      {architecture ? (
+      {architecture?.title ? (
         <div>
           <p className="font-bold">{architecture.title}</p>
           <p>{architecture.text}</p>
         </div>
       ) : null}
-      {Challenge ? (
+      {Challenge?.title ? (
         <div>
           <p className="font-bold">{Challenge.title}</p>
           <p>{Challenge.text}</p>
